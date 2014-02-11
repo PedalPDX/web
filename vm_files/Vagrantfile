@@ -44,7 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   
   # Enable provisioning with shell script  
-  config.vm.provision :shell, :path => "simple_provision.sh"
+  config.vm.provision :shell, :path => "provision.sh"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
