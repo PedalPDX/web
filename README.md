@@ -16,4 +16,10 @@ Again, the repo has the appropriate files to use Vagrant but let's clarify Vagra
 
 ### How to Use Vagrant
 Once installed, Vagrant is fairly simple to use. Besides this basic tutorial, there is great documentation at the [Vagrant](http://docs.vagrantup.com/v2/) website.
-1. Make sure current directory is vm_config. 
+
+```bash
+cd vm_files
+vagrant up
+vagrant ssh
+```
+
