@@ -13,7 +13,6 @@ fi
 # update machine before installing required applications
 apt-get update
 apt-get upgrade -y
-apt-get install -y python-dev
-apt-get install -y python-pip
+apt-get install -y python-dev python-pip byobu
 
 pip install flask
