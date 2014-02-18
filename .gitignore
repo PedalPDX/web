@@ -37,3 +37,6 @@ nosetests.xml
 
 # vagrant
 .vagrant
+
+# project specific ignore(s)
+sites/index.html
