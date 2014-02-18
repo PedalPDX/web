@@ -18,6 +18,7 @@ apt-get install -y python-dev python-pip byobu apache2 libapache2-mod-wsgi
 pip install flask
 
 a2dissite default
+rm /var/www/index.html
 chmod -R a+rx /var/www/pedalpdx.com
 ln -s /vagrant/pedalpdx.com.conf /etc/apache2/sites-available/pedalpdx.com.conf
 a2ensite pedalpdx.com.conf

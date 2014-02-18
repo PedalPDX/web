@@ -39,4 +39,4 @@ nosetests.xml
 .vagrant
 
 # project specific ignore(s)
-sites/index.html
+sites/pedalpdx.com/log/

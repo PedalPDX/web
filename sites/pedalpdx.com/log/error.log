@@ -1,7 +1,0 @@
-[Tue Feb 18 01:17:18 2014] [error] [client 10.0.2.2] File does not exist: /var/www/pedalpdx.com/public/favicon.ico
-[Tue Feb 18 01:44:22 2014] [error] [client 10.0.2.2] Target WSGI script not found or unable to stat: /var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi
-[Tue Feb 18 01:44:32 2014] [error] [client 10.0.2.2] Target WSGI script not found or unable to stat: /var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi
-[Tue Feb 18 01:44:35 2014] [error] [client 10.0.2.2] Target WSGI script not found or unable to stat: /var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi
-[Tue Feb 18 01:44:36 2014] [error] [client 10.0.2.2] Target WSGI script not found or unable to stat: /var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi
-[Tue Feb 18 01:44:50 2014] [error] [client 127.0.0.1] Target WSGI script not found or unable to stat: /var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi
-[Tue Feb 18 01:45:46 2014] [error] [client 10.0.2.2] mod_wsgi (pid=6407): Target WSGI script '/var/www/pedalpdx.com/public/pedalpdxwebapp.wsgi' does not contain WSGI application 'application'.
