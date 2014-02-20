@@ -1,12 +1,10 @@
 #! /usr/bin/env python
-
 from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route('/')
-def simple_app():
+def homedir():
     return 'Lala simple different statement of success!'
 
 if __name__ == '__main__':
