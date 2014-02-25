@@ -13,7 +13,7 @@ fi
 # update machine before installing required applications
 apt-get update
 apt-get upgrade -y
-apt-get install -y python-dev python-pip byobu apache2 libapache2-mod-wsgi
+apt-get install -y python-dev python-pip byobu apache2 libapache2-mod-wsgi tree
 
 pip install flask
 
