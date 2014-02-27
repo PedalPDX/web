@@ -7,6 +7,9 @@ The PedalPortland website is for the purpose of displaying the geospatial data c
 ## Stack and Development Tools
 The website is being implemented in Flask which is a Web Server Gateway Interface (WSGI) for Python. We are using Python2 (2.7.3) on 12.04 Ubuntu. Flask is installed via pip. Within the repo there are also configuration files for using Vagrant, a tool for interacting with virtual environments, particularly useful for sandboxing development environments.
 
+### Flask on Apache
+Deploying Flask in production is different then using flask standalone. There are a few different tutorials out there describing suggested implementations of using Apache WSGI module with Flask. The structure in use is loosely based on the example provided at [Ocean Imaging Informatics @ WHOI](https://beagle.whoi.edu/redmine/projects/ibt/wiki/Deploying_Flask_Apps_with_Apache_and_Mod_WSGI). The differences lie in the file ppwebapp.py. There is no need to 'run' ppwebapp.py explicitly, this is exactly the purpose of Apache. Apache picks up the requests for the Flask app via the wsgi script which routes the request to ppwebapp.py. The script is currently setup to run out of the box on Vagrant. See which files are used by looking in ```/var/www/pedalpdx.com/```. Apache starts at bootup. To access the flask example point a curl on the Vagrant instance to http://localhost:80 or from the host machine with [http://localhost:8080](http://localhost:8080).
+
 ### Vagrant
 Vagrant abstracts the interaction with virtual environments. Vagrant is not the virtual environment itself. The VM could run on VMWare, VirtualBox, LXC, etc. We are using VirtualBox in headless mode. 
 
