@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
+		<meta name="description" content="The OFFICIAL Website for PedalPDX. Portland State CS Capstone Team D">
 		<meta name="author" content="">
 
 		<title>PedalPDX - The bicyclist best friend.</title>
@@ -13,41 +13,81 @@
 
 
 		<!-- Add custom CSS here -->
-		<link href="ws/css/stylish-portfolio.css" rel="stylesheet">
+		<link href="ws/css/Native.css" rel="stylesheet">
+
 		<link href="index.css" rel="stylesheet">
         
+		<!-- Add CSS for the MAP Canvas -->
+
+		<style>
+      	html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      	}
+  		  </style>
+   			
+          
+        <!-- Add JS from Google to render their awesone map  -->
+
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+   		  
+		  <script>
+			function initialize() {
+ 			var portland = new google.maps.LatLng(45.5200,-122.6819);
+			var mapOptions = {
+   		    zoom: 11,
+   			center: portland
+ 			}
+
+
+  			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+			var ctaLayer = new google.maps.KmlLayer({
+ 		    url: 'http://pedal.cs.pdx.edu:5002/kml/874323'
+		    });
+		    ctaLayer.setMap(map);
+		    }
+
+		    google.maps.event.addDomListener(window, 'load', initialize);
+
+  		  </script>
         
 	</head>
 
 	<body>
-		<div class="leader-banner">
-			<img src="ws/img/TopLogo.png">
-            
-            		</div>	
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+ 
 
-		<!-- Side Menu -->
-		<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav">
-				<a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-				<li class="sidebar-brand">PedalPDX Menu</li>
+    <!-- Floating Menu for Navagation bar on top -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
 				<li><a href="#top">Home</a></li>
-				<li><a href="#about">About Us</a></li>
+				<li><a href="#about">MEET THE TEAM</a></li>
 				<li><a href="#theapp">The APP</a></li>
-				<li><a href="#howto">How PedalPDX works</a></li>
-				<li><a href="#topic1">Topic 1</a></li
-                ><li><a href="#topic2">Topic 2</a></li>
+				<li><a href="#howto">Route Tracking</a></li>
+				<li><a href="#topic1">Topic 1</a></li>
+                <li><a href="#topic2">Topic 2</a></li>
 				<li><a href="#topic3">Topic 3</a></li>
                 <li><a href="#getapp">Get the APP</a></li>
                 <li><a href="#license">License</a></li>
 				<li><a href="#faqs">FAQs</a></li>
 				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-		<!-- /Side Menu -->
+        </ul>
+   
+    </div>
+  	</nav> <!-- /.navbar ends heere -->
+
+    
+    	<!-- PedalPDX logo here -->
+		<div id="top" class="leader-banner"><br><br><br>
+			<img src="ws/img/TopLogo.png">
+        </div>	
+
+		
 	
 		<!-- Full Page Image Header Area -->
-		<div id="top" class="header">
+		<div  class="header">
 			<div class="vert-text" >
 				<div style=" background-color:rgba(0,0,0,.70); padding:4px; margin-bottom:8px"><h1>Welcome to PedalPDX!</h1>
 				<h3>We are bicyclist best friend.</h3></div>
@@ -57,33 +97,62 @@
 		</div>
 		<!-- /Full Page Image Header Area -->
 	
+    
+    
 		<!-- Intro About -->
 		<div id="about" class="intro">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2>About Us</h2>
+						
+                        <!-- Meet The Team & Picture -->                      
+
+                        <h2>MEET THE TEAM</h2>
 						<p class="lead">
-							We are a team of 7.<br>
-                            Keep here the team Name...
-						</p>
+					  
+<div class="TeamPhoto"> 
+                      
+<table width="175" border="0">
+  <tr>
+    <td width="169"><img src="ws/img/TeamPic.png" /></td>
+    </tr>
+  <tr>
+    <td>Team Name</td>
+    </tr>
+  <tr>
+    <td><table width="100%" border="0">
+      <tr>
+        <td><img src="ws/img/LinkedInIcon.png"/></td>
+        <td><img src="ws/img/GitHubIcon.png"/></td>
+      </tr>
+    </table></td>
+    </tr>
+</table>
+</div>
+</p>     <!-- Meet The Team & Picture ends-->                      
+
 						
 						
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /Intro -->
+		
+        		<!-- Intro About ends-->
 
-		<!-- Callout -->
+
+     <!-- Download PedalPDX app showcase-->
 		<div class="callout">
 			<div class="vert-text-download">
 				<div style=" background-color:rgba(60, 160, 250, 55.6); padding:4px; margin-bottom:8px">Download the PedalPDX APP from Play Store.<img src="ws/img/Android_Market.png"/></div>
 			</div>
 		</div>
-		<!-- /Callout -->
 
-		<!-- Examples -->
+     <!-- Download PedalPDX app showcase ends-->
+
+
+     <!-- How the app works -->
+
 		<div id="theapp" class="portfolio">
 			<div class="container">
 				<div class="row">
@@ -95,43 +164,57 @@
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="portfolio-item">
-							<h3 class="text-center">Loading the data...</h3>
-								<p class="lead">
-									Here we're illustrating loading our route data from our own database using the technology of KML, and telling the Google Maps what places to draw.
-								</p>
+							<h3 class="lead">How PedalPDX works</h3>				                        
+
 								
-								<div id="custom-places" class="small-map"></div>
 								
-								<div class="clearfix"></div>
-								<div class="code">
-									<pre class="prettyprint lang-js">
 								
-                                
-                                
-									</pre>
-								</div>
 								
 						</div>
 					</div>
 				</div>
-				<hr>
+				
+                
+                <hr>
 				
 				
-		<!-- /Examples -->
+		     <!-- How the app works ends -->
 
-		<!-- Call to Action -->
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Route tracking Map pagination coming soon.... Excited !! -->
 		
-        
-
-		<!-- Intro -->
-		<div id="howto" class="intro">
-			<div class="container">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<h2>How PedalPDX works</h2>
-						<ul class="list-unstyled">
-							How our app works? 
-						</ul>
+        		<div id="howto" class="intro">
+                <div class="container">
+          					<div class="col-md-8 col-md-offset-2 text-center">
+<h2 class="text-center">Route Tracking</h2>
+								<p class="lead">
+									Loading the data: Here we're illustrating loading our route data from our own database using the technology of KML, and telling the Google Maps what places to draw.
+								</p>
+                 </div>       
                         
+                        
+        <iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="Map.html"></iframe>
+        <br />
+      
+          					<div class="col-md-8 col-md-offset-2 text-center">
+
+		<!-- Route tracking Map pagination coming soon.... Excited !! exds -->
+			
+						
+		              
+                        		<!-- Team Speaking -->
+ <hr>
                         
                        <div id="topic1" class="intro">
 
@@ -141,7 +224,7 @@
 						</ul>
                         </div>
                         
-                       
+                        <hr>
                           <div id="topic2" class="intro">
 
                         <h2>Team Speaking 2</h2>
@@ -150,6 +233,9 @@
 						</ul>
                         </div>
                         
+                        
+                         <hr>
+                        
                           <div id="topic3" class="intro">
 
                         <h2>Team Speaking 3</h2>
@@ -157,9 +243,15 @@
 							
 						</ul>
                         </div>
-                        
+                         <hr>
                         <br><br><br>
                         
+                        <!-- Team Speaking ends -->
+                        
+                        
+                        
+                        <!-- TDownload the app-->
+
                          <div id="getapp" class="intro">
 
                         <h2>How to get ge this awsome APP?</h2>
@@ -179,10 +271,13 @@
 				</div>
 			</div>
 
-		<!-- /Intro -->
+                        <!-- Download the app ends-->
 		
-          <div id="faqs" class="intro">
-<div class="row">
+         <hr>
+         <!--  Licensing starts -->
+
+          <div id="license" class="intro">
+			<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2>License</h2>
 						
@@ -191,9 +286,13 @@
                         
                         </div></div></div>
 		
-        
-         <div id="license" class="intro">
-<div class="row">
+           <!--  Licensing starts ends-->
+ 		<hr>
+           <!--  Faqs starts here -->
+
+
+         <div id="faqs" class="intro">
+			<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2>Frequently Asked Questions</h2>
 						
@@ -201,15 +300,25 @@
                             <em>You can either download from the app store or if you are a developer then you can pull it from our github....</em>
 						
                         
-                        </div></div></div>
+                        </div>
+             </div>
+         </div>
                         
         
-		<!-- Footer -->
+      <!--  Faqs starts ends ends-->
+
+         <hr>
+		<!-- Contact Us -->
 		<footer>
 			<div id="contact" class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2>Contact</h2>
+                        
+                        
+                        
+                        
+                        
                         
                      Github, email etcs..
                         
@@ -218,15 +327,17 @@
 
 			</div>
 		</footer>
-		<!-- /Footer -->
+		<!-- Contact Us ends -->
 
 		
+        
+         <!-- JS Dependencies -->
+
 		<script src="ws/js/jquery-1.10.2.js"></script>
 		<script src="ws/js/bootstrap.js"></script>
 
-	
-		
-		<!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+
+<!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
 		<script>
 				$("#menu-close").click(function(e) {
 						e.preventDefault();
@@ -267,7 +378,12 @@
 			});
 		</script>
 	
+		 <!-- JS Dependencies ends -->
+
+	
 
 	</body>
 
 </html>
+
+<!-- Thats all folks ! -->
