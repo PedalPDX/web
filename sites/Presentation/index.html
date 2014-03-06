@@ -44,7 +44,7 @@
   			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 			var ctaLayer = new google.maps.KmlLayer({
- 		    url: 'http://pedal.cs.pdx.edu:5002/kml/874323'
+ 		    url: 'http://api.pedal.cs.pdx.edu/kml/874323'
 		    });
 		    ctaLayer.setMap(map);
 		    }
@@ -64,6 +64,7 @@
       <ul class="nav navbar-nav">
 				<li><a href="#top">Home</a></li>
 				<li><a href="#about">MEET THE TEAM</a></li>
+                <li><a href="#download">Download</a></li>
 				<li><a href="#theapp">The APP</a></li>
 				<li><a href="#howto">Route Tracking</a></li>
 				<li><a href="#topic1">Topic 1</a></li>
@@ -110,25 +111,7 @@
                         <h2>MEET THE TEAM</h2>
 						<p class="lead">
 					  
-<div class="TeamPhoto"> 
-                      
-<table width="175" border="0">
-  <tr>
-    <td width="169"><img src="ws/img/TeamPic.png" /></td>
-    </tr>
-  <tr>
-    <td>Team Name</td>
-    </tr>
-  <tr>
-    <td><table width="100%" border="0">
-      <tr>
-        <td><img src="ws/img/LinkedInIcon.png"/></td>
-        <td><img src="ws/img/GitHubIcon.png"/></td>
-      </tr>
-    </table></td>
-    </tr>
-</table>
-</div>
+<div class="TeamPhoto"></div>
 </p>     <!-- Meet The Team & Picture ends-->                      
 
 						
@@ -142,9 +125,26 @@
 
 
      <!-- Download PedalPDX app showcase-->
-		<div class="callout">
+		<div  id="download" class="callout">
 			<div class="vert-text-download">
-				<div style=" background-color:rgba(60, 160, 250, 55.6); padding:4px; margin-bottom:8px">Download the PedalPDX APP from Play Store.<img src="ws/img/Android_Market.png"/></div>
+				<div style=" background-image:url(ws/img/DownloadBg.png)"; padding:4px; margin-bottom:8px">Download the PedalPDX APP from Play Store.<img src="ws/img/Android_Market.png"/>
+                
+                <table width="100%" border="0">
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+                </table>
+                
+                
+                
+                </div>
 			</div>
 		</div>
 

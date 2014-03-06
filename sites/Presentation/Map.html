@@ -13,17 +13,17 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
-function initialize() {
-  var chicago = new google.maps.LatLng(41.875696,-87.624207);
-  var mapOptions = {
-    zoom: 11,
-    center: chicago
+			function initialize() {
+ 			var portland = new google.maps.LatLng(45.5200,-122.6819);
+			var mapOptions = {
+   		    zoom: 11,
+   			center: portland
   }
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://pedal.cs.pdx.edu:5002/kml/874323'
+    url: 'http://api.pedal.cs.pdx.edu/kml/874323'
   });
   ctaLayer.setMap(map);
 }

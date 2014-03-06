@@ -8,3 +8,27 @@ body {
 	cursor: pointer;
 }
 
+.TeamBG {
+	background-image:url(ws/img/TeamPic.png);
+	background-repeat:no-repeat;
+	width:172px;
+	height:187px;
+	padding-right:40px;
+	}
+	
+	
+.TeamBGs {
+	padding-bottom:30px;
+	padding-top:4px;
+	text-align:left;
+	padding-left:4px;
+	padding-top:2px;
+	}
+
+
+.TeamBGInfo {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	text-align:left;
+	padding-left:4px;
+	padding-top:4px;	}
